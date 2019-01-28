@@ -1,1 +1,5 @@
 laravel/
+.env
+
+data/
+database/
