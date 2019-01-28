@@ -27,7 +27,7 @@ $ ./run.sh
 
 Url : http://localhost/
 
-##Access phpMyAdmin
+## Access phpMyAdmin
 
 http://localhost:8080
 ~~~~   
