@@ -27,7 +27,7 @@ services:
     tty: true
     ports:
       - "80:80"
-      - "443:443"
+#       - "443:443"
     volumes:
       - ./laravel:/var/www
       - ./Config/nginx/conf.d/:/etc/nginx/conf.d/
@@ -59,6 +59,24 @@ services:
           - "8080:80"
       networks:
       - app-network
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    hostname: hostname
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        gitlab_rails['gitlab_shell_ssh_port'] = 8822
+    ports:
+      - "443:443"
+      - "8880:80"
+      - "8822:22"
+# The logs directory can be mapped to the logs directory in the same director
+# as the docker-compose file using the following entry under volumes:
+# - ./logs:/var/log/gitlab
+    volumes:
+      - gitlab-config:/etc/gitlab
+      - gitlab-data:/var/opt/gitlab
+    restart: always
+ 
 
 #Docker Networks
 networks:
@@ -68,3 +86,7 @@ networks:
 volumes:
   dbdata:
     driver: local
+  gitlab-data:
+    external: true
+  gitlab-config:
+    external: true
