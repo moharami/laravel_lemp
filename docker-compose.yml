@@ -86,7 +86,3 @@ networks:
 volumes:
   dbdata:
     driver: local
-  gitlab-data:
-    external: true
-  gitlab-config:
-    external: true
