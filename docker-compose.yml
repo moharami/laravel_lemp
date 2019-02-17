@@ -84,5 +84,9 @@ networks:
     driver: bridge
 #Volumes
 volumes:
+  gitlab-data:
+    external: true
+  gitlab-config:
+    external: true
   dbdata:
     driver: local
