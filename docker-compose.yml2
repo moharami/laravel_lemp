@@ -34,18 +34,16 @@ services:
       - ./data/nginx/:/var/log/nginx/
     networks:
       - app-network
-  
+
   #database Service
   database:
     image: mariadb:latest
     container_name: database
     environment:
-       - MYSQL_DATABASE=${MYSQL_DATABASE}
-        - MYSQL_USER=${MYSQL_USER}
-        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        - "MYSQL_USERNAME=root"
+        - "MYSQL_ROOT_PASSWORD=secret"
     ports:
-        - "${MYSQL_PORT}:3306"
+        - "3306:3306"
     networks:
       - app-network
     volumes:
@@ -64,7 +62,9 @@ services:
       ports:
           - "8080:80"
       networks:
-       - app-network
+      - app-network
+
+ 
 
 #Docker Networks
 networks:
