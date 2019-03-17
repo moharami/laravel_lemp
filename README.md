@@ -19,7 +19,9 @@ docker-compose
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
+
 ` $ git clone https://github.com/moharami/laravel_lemp.git `
+
 `$ sudo ./run.sh`
 
 
@@ -28,7 +30,6 @@ A step by step series of examples that tell you how to get a development env run
 ## url
 
 you now open your project in this url : 
-####[laravel.test](http://laravel.test) 
 
 * [laravel.test](http://laravel.test/) : 
 * [phpmyadmin](http://localhost:8080/) : localhost:8080
