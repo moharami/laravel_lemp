@@ -44,9 +44,9 @@ after it's finished, you have
 4. Laravel project
 
 
-##multi project
+## multi project
 
-###quick Setup
+### quick Setup
 for more setup we create one shell for this purpose. you need just run 
 
 `sudo ./makeNewProject.sh`
@@ -55,10 +55,10 @@ after run this shell you have url for your project and one database created in p
 
 
 
-####Manual setup 
+#### Manual setup 
 
 
-####step 1
+#### step 1
 for multi project purpose , you have to put your projecti in 'projects' forlder. structure like this
 
 
@@ -69,5 +69,5 @@ for multi project purpose , you have to put your projecti in 'projects' forlder.
     - project2
 
 
-####step 2
+#### step 2
 edit your nginx configuration . we put project1 example in `./Config/nginx/conf.d/project1.conf` that it point to project1. you can add your own nginx configuration.
