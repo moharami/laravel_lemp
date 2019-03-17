@@ -28,10 +28,10 @@ A step by step series of examples that tell you how to get a development env run
 ## url
 
 you now open your project in this url : 
-####[laravel.test](http://laravel.test) 
+laravel.test](http://laravel.test) 
 
 and your phpmyadmin address is : 
-####[localhost:8080](http://localhost:8080) 
+localhost:8080](http://localhost:8080) 
 
 
 
